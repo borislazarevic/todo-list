@@ -4,6 +4,8 @@
   --yellow: rgb(233, 236, 26);
   --red: rgb(212, 42, 42);
   --green: rgb(37, 129, 9);
+  --lightgreen: rgb(97, 138, 85);
+  --light: rgb(178, 172, 136);
 }
 
 * {

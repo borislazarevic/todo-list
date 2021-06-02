@@ -1,0 +1,11 @@
+.TaskListContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.TaskList {
+  height: 500px;
+  width: 450px;
+}

@@ -1,21 +1,24 @@
-.Form {
+.TaskContainer {
   background-color: var(--lightyellow);
-  padding: 30px 0;
-  text-align: center;
+  border-radius: 5px;
+  height: 60px;
+  width: 95%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin: 5px auto;
 }
 
-.Input {
-  border: 2px solid var(--darkblue);
-  border-radius: 5px;
+.Task {
   color: var(--darkblue);
+  list-style: none;
   font-size: 1.5rem;
   font-weight: 700;
-  padding: 10px 5px;
-  outline: none;
-  width: 30%;
+  padding-left: 10px;
+}
+
+.ButtonWrapper {
+  padding-right: 10px;
 }
 
 .ButtonGreen,
