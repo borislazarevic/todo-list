@@ -14,34 +14,40 @@ const Input = ({ inputText, setInputText, tasks, setTasks, id }) => {
   const addInputHandler = e => {
     e.preventDefault();
     if (inputText.trim() === '') return;
-    setTasks([...tasks, { text: inputText.trim(), id: id }]);
+    setTasks([...tasks, { text: inputText.trim(), id: id, completed: false }]);
     setInputText('');
   };
 
   return (
-    <form className={classes.Form}>
-      <input
-        type="text"
-        className={classes.Input}
-        value={inputText}
-        title="Add your task"
-        onChange={inputChangeHandler}
-      />
-      <button
-        type="submit"
-        className={classes.ButtonGreen}
-        onClick={addInputHandler}
-      >
-        <i className="fas fa-check" style={{ fontSize: '2.3rem' }}></i>
-      </button>
-      <button
-        type="reset"
-        className={classes.ButtonRed}
-        onClick={clearInputHandler}
-      >
-        <i className="fas fa-times" style={{ fontSize: '2.3rem' }}></i>
-      </button>
-    </form>
+    <>
+      <form className={classes.Form}>
+        <input
+          type="text"
+          className={classes.Input}
+          value={inputText}
+          title="Add your task"
+          onChange={inputChangeHandler}
+        />
+        <button
+          type="submit"
+          className={classes.ButtonGreen}
+          onClick={addInputHandler}
+        >
+          <i className="fas fa-check" style={{ fontSize: '2.3rem' }}></i>
+        </button>
+        <button
+          type="reset"
+          className={classes.ButtonRed}
+          onClick={clearInputHandler}
+        >
+          <i className="fas fa-times" style={{ fontSize: '2.3rem' }}></i>
+        </button>
+      </form>
+      <div className={classes.FilterTask}>
+        <div className={classes.Active}>ACTIVE</div>
+        <div className={classes.Complete}>COMPLETED</div>
+      </div>
+    </>
   );
 };
 

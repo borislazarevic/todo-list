@@ -14,6 +14,7 @@ const TaskList = ({ tasks, setTasks }) => {
             id={task.id}
             tasks={tasks}
             setTasks={setTasks}
+            task={task}
           />
         ))}
       </ul>

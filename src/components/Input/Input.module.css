@@ -40,3 +40,32 @@
 .ButtonRed:active {
   transform: scale(0.8);
 }
+
+.FilterTask {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0 40px 0;
+}
+
+.Complete,
+.Active {
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 10px 20px;
+}
+
+.ButtonComplete:active,
+.ButtonActive:active {
+  transform: scale(0.8);
+}
+
+.Complete {
+  background-color: var(--green);
+  color: white;
+}
+
+.Active {
+  background-color: var(--lightyellow);
+  color: var(--darkblue);
+}
