@@ -2,10 +2,10 @@
   background-color: var(--lightyellow);
   border-radius: 5px;
   min-height: 60px;
-  width: 95%;
+  min-width: 300px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   margin: 10px auto;
 }
@@ -16,11 +16,12 @@
   font-size: 1.5rem;
   font-weight: 700;
   padding-left: 10px;
-  flex-basis: 60%;
+  flex-basis: 58%;
 }
 
 .ButtonWrapper {
   padding-right: 10px;
+  display: flex;
 }
 
 .ButtonGreen,

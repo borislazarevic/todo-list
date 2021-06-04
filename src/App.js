@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import nextId from 'react-id-generator';
 
 import classes from './App.module.css';
@@ -9,6 +9,15 @@ function App() {
   const [inputText, setInputText] = useState('');
   const [tasks, setTasks] = useState([]);
   const id = nextId();
+
+  useEffect(() => {
+    const savedTasks = JSON.parse(localStorage.getItem('tasks'));
+    tasks && setTasks(savedTasks);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   return (
     <>
