@@ -8,7 +8,15 @@ import TaskList from './components/TaskList/TaskList';
 function App() {
   const [inputText, setInputText] = useState('');
   const [tasks, setTasks] = useState([]);
+  const [active, setActive] = useState(0);
   const id = nextId();
+
+  useEffect(() => {
+    const savedActive = localStorage.getItem('active');
+    setActive(
+      savedActive && savedActive.length > 0 ? JSON.parse(savedActive) : []
+    );
+  }, []);
 
   useEffect(() => {
     const savedTasks = JSON.parse(localStorage.getItem('tasks'));
@@ -16,8 +24,9 @@ function App() {
   }, []);
 
   useEffect(() => {
+    localStorage.setItem('active', JSON.stringify(active));
     localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks]);
+  }, [tasks, active]);
 
   return (
     <>
@@ -30,8 +39,15 @@ function App() {
         tasks={tasks}
         setTasks={setTasks}
         id={id}
+        active={active}
+        setActive={setActive}
       />
-      <TaskList tasks={tasks} setTasks={setTasks} />
+      <TaskList
+        tasks={tasks}
+        setTasks={setTasks}
+        active={active}
+        setActive={setActive}
+      />
     </>
   );
 }

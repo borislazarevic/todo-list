@@ -71,3 +71,20 @@
   color: var(--darkblue);
   margin-left: 50px;
 }
+
+.ActiveTasks,
+.CompletedTasks {
+  font-size: 1.6rem;
+  background-color: white;
+  padding: 5px;
+  border-radius: 3px;
+  margin-left: 20px;
+}
+
+.ActiveTasks {
+  color: var(--darkblue);
+}
+
+.CompletedTasks {
+  color: var(--green);
+}

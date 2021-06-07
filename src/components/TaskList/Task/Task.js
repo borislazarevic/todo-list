@@ -2,12 +2,14 @@ import React from 'react';
 
 import classes from './Task.module.css';
 
-const Task = ({ tasks, setTasks, text, id, task }) => {
+const Task = ({ tasks, setTasks, text, id, task, active, setActive }) => {
   const removeTask = () => {
     const removedTask = tasks.filter(task => {
       return id !== task.id;
     });
     setTasks(removedTask);
+    if (active <= 0) return;
+    setActive(prevActive => prevActive - 1);
   };
 
   const completeTaskHandler = () => {

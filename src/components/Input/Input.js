@@ -2,7 +2,15 @@ import React from 'react';
 
 import classes from './Input.module.css';
 
-const Input = ({ inputText, setInputText, tasks, setTasks, id }) => {
+const Input = ({
+  inputText,
+  setInputText,
+  tasks,
+  setTasks,
+  id,
+  active,
+  setActive,
+}) => {
   const inputChangeHandler = e => {
     setInputText(e.target.value);
   };
@@ -16,6 +24,7 @@ const Input = ({ inputText, setInputText, tasks, setTasks, id }) => {
     if (inputText.trim() === '') return;
     setTasks([...tasks, { text: inputText.trim(), id: id, completed: false }]);
     setInputText('');
+    setActive(prevActive => prevActive + 1);
   };
 
   return (
@@ -44,8 +53,13 @@ const Input = ({ inputText, setInputText, tasks, setTasks, id }) => {
         </button>
       </form>
       <div className={classes.FilterTask}>
-        <div className={classes.Active}>ACTIVE</div>
-        <div className={classes.Complete}>COMPLETED</div>
+        <div className={classes.Active}>
+          ACTIVE <span className={classes.ActiveTasks}>{active}</span>
+        </div>
+
+        <div className={classes.Complete}>
+          COMPLETED <span className={classes.CompletedTasks}>3</span>
+        </div>
       </div>
     </>
   );
