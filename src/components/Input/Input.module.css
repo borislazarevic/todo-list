@@ -15,7 +15,7 @@
   font-weight: 700;
   padding: 10px 5px;
   outline: none;
-  width: 30%;
+  width: 40%;
 }
 
 .ButtonGreen,
@@ -63,9 +63,11 @@
 .Complete {
   background-color: var(--green);
   color: white;
+  margin-right: 50px;
 }
 
 .Active {
   background-color: var(--lightyellow);
   color: var(--darkblue);
+  margin-left: 50px;
 }
