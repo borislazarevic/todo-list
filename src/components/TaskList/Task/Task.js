@@ -8,7 +8,7 @@ const Task = ({ tasks, setTasks, text, id, task, active, setActive }) => {
       return id !== task.id;
     });
     setTasks(removedTask);
-    if (active <= 0) return;
+    if (active < 0) return;
     setActive(prevActive => prevActive - 1);
   };
 

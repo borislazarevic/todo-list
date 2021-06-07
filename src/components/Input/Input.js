@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import classes from './Input.module.css';
 
@@ -11,6 +11,12 @@ const Input = ({
   active,
   setActive,
 }) => {
+  const inputFocus = useRef(null);
+
+  useEffect(() => {
+    inputFocus.current.focus();
+  });
+
   const inputChangeHandler = e => {
     setInputText(e.target.value);
   };
@@ -33,6 +39,7 @@ const Input = ({
         <input
           type="text"
           className={classes.Input}
+          ref={inputFocus}
           value={inputText}
           title="Add your task"
           onChange={inputChangeHandler}
