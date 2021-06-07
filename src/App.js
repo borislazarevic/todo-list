@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import nextId from 'react-id-generator';
 
 import classes from './App.module.css';
 import Input from './components/Input/Input';
@@ -9,7 +8,6 @@ function App() {
   const [inputText, setInputText] = useState('');
   const [tasks, setTasks] = useState([]);
   const [active, setActive] = useState(0);
-  const id = nextId();
 
   useEffect(() => {
     const savedActive = localStorage.getItem('active');
@@ -38,7 +36,6 @@ function App() {
         setInputText={setInputText}
         tasks={tasks}
         setTasks={setTasks}
-        id={id}
         active={active}
         setActive={setActive}
       />

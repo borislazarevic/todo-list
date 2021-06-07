@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { v4 as uuid } from 'uuid';
 
 import classes from './Input.module.css';
 
@@ -27,6 +28,7 @@ const Input = ({
 
   const addInputHandler = e => {
     e.preventDefault();
+    const id = uuid();
     if (inputText.trim() === '') return;
     setTasks([...tasks, { text: inputText.trim(), id: id, completed: false }]);
     setInputText('');
