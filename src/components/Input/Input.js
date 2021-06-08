@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import { v4 as uuid } from 'uuid';
 
 import classes from './Input.module.css';
+import ActiveTasks from './ActiveTasks/ActiveTasks';
+import CompletedTasks from './CompletedTasks/CompletedTasks';
 
 const Input = ({
   inputText,
@@ -62,14 +64,8 @@ const Input = ({
         </button>
       </form>
       <div className={classes.FilterTask}>
-        <div className={classes.Active}>
-          ACTIVE <span className={classes.ActiveTasks}>{active}</span>
-        </div>
-
-        <div className={classes.Complete}>
-          COMPLETED{' '}
-          <span className={classes.CompletedTasks}>{isCompleted}</span>
-        </div>
+        <ActiveTasks active={active} isCompleted={isCompleted} />
+        <CompletedTasks active={active} isCompleted={isCompleted} />
       </div>
     </>
   );

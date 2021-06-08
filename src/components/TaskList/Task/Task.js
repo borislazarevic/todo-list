@@ -10,7 +10,6 @@ const Task = ({
   task,
   active,
   setActive,
-  isCompleted,
   setIsCompleted,
 }) => {
   const removeTask = () => {
