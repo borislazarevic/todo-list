@@ -11,6 +11,15 @@ function App() {
   const [isCompleted, setIsCompleted] = useState(0);
 
   useEffect(() => {
+    const savedIsCompleted = localStorage.getItem('isCompleted');
+    setIsCompleted(
+      savedIsCompleted && savedIsCompleted.length > 0
+        ? JSON.parse(savedIsCompleted)
+        : []
+    );
+  }, []);
+
+  useEffect(() => {
     const savedActive = localStorage.getItem('active');
     setActive(
       savedActive && savedActive.length > 0 ? JSON.parse(savedActive) : []
@@ -25,7 +34,8 @@ function App() {
   useEffect(() => {
     localStorage.setItem('active', JSON.stringify(active));
     localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks, active]);
+    localStorage.setItem('isCompleted', JSON.stringify(isCompleted));
+  }, [tasks, active, isCompleted]);
 
   return (
     <>

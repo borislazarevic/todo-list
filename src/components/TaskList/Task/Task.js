@@ -19,9 +19,10 @@ const Task = ({
     });
     setTasks(removedTask);
     if (active < 0) return;
-    setActive(prevActive => prevActive - 1);
     if (task.completed) {
       setIsCompleted(prevCompleted => prevCompleted - 1);
+    } else {
+      setActive(prevActive => prevActive - 1);
     }
   };
 
@@ -37,9 +38,15 @@ const Task = ({
     });
     setTasks(completedTask);
     if (task.completed) {
-      return setIsCompleted(prevCompleted => prevCompleted - 1);
+      return (
+        setIsCompleted(prevCompleted => prevCompleted - 1),
+        setActive(prevActive => prevActive + 1)
+      );
     } else {
-      return setIsCompleted(prevCompleted => prevCompleted + 1);
+      return (
+        setIsCompleted(prevCompleted => prevCompleted + 1),
+        setActive(prevActive => prevActive - 1)
+      );
     }
   };
 
