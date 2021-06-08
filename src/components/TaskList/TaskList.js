@@ -4,7 +4,14 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import classes from './TaskList.module.css';
 import Task from './Task/Task';
 
-const TaskList = ({ tasks, setTasks, active, setActive }) => {
+const TaskList = ({
+  tasks,
+  setTasks,
+  active,
+  setActive,
+  isCompleted,
+  setIsCompleted,
+}) => {
   return (
     <div className={classes.TaskListContainer}>
       <Scrollbars
@@ -27,6 +34,8 @@ const TaskList = ({ tasks, setTasks, active, setActive }) => {
               task={task}
               active={active}
               setActive={setActive}
+              isCompleted={isCompleted}
+              setIsCompleted={setIsCompleted}
             />
           ))}
         </ul>

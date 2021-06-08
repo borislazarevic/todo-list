@@ -2,7 +2,17 @@ import React from 'react';
 
 import classes from './Task.module.css';
 
-const Task = ({ tasks, setTasks, text, id, task, active, setActive }) => {
+const Task = ({
+  tasks,
+  setTasks,
+  text,
+  id,
+  task,
+  active,
+  setActive,
+  isCompleted,
+  setIsCompleted,
+}) => {
   const removeTask = () => {
     const removedTask = tasks.filter(task => {
       return id !== task.id;
@@ -10,6 +20,9 @@ const Task = ({ tasks, setTasks, text, id, task, active, setActive }) => {
     setTasks(removedTask);
     if (active < 0) return;
     setActive(prevActive => prevActive - 1);
+    if (task.completed) {
+      setIsCompleted(prevCompleted => prevCompleted - 1);
+    }
   };
 
   const completeTaskHandler = () => {
@@ -23,6 +36,11 @@ const Task = ({ tasks, setTasks, text, id, task, active, setActive }) => {
       return task;
     });
     setTasks(completedTask);
+    if (task.completed) {
+      return setIsCompleted(prevCompleted => prevCompleted - 1);
+    } else {
+      return setIsCompleted(prevCompleted => prevCompleted + 1);
+    }
   };
 
   return (

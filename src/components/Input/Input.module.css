@@ -83,6 +83,7 @@
 
 .ActiveTasks {
   color: var(--darkblue);
+  border: 2px solid var(--darkblue);
 }
 
 .CompletedTasks {

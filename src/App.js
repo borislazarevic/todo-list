@@ -8,6 +8,7 @@ function App() {
   const [inputText, setInputText] = useState('');
   const [tasks, setTasks] = useState([]);
   const [active, setActive] = useState(0);
+  const [isCompleted, setIsCompleted] = useState(0);
 
   useEffect(() => {
     const savedActive = localStorage.getItem('active');
@@ -38,12 +39,15 @@ function App() {
         setTasks={setTasks}
         active={active}
         setActive={setActive}
+        isCompleted={isCompleted}
       />
       <TaskList
         tasks={tasks}
         setTasks={setTasks}
         active={active}
         setActive={setActive}
+        isCompleted={isCompleted}
+        setIsCompleted={setIsCompleted}
       />
     </>
   );

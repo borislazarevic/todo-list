@@ -8,9 +8,9 @@ const Input = ({
   setInputText,
   tasks,
   setTasks,
-  id,
   active,
   setActive,
+  isCompleted,
 }) => {
   const inputFocus = useRef(null);
 
@@ -67,7 +67,8 @@ const Input = ({
         </div>
 
         <div className={classes.Complete}>
-          COMPLETED <span className={classes.CompletedTasks}>3</span>
+          COMPLETED{' '}
+          <span className={classes.CompletedTasks}>{isCompleted}</span>
         </div>
       </div>
     </>
