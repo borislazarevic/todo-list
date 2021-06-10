@@ -18,3 +18,29 @@ $light: rgb(178, 172, 136);
 body {
   font-family: 'Rubik', sans-serif;
 }
+
+// Mixin
+
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media screen and (max-width: 480px) {
+      @content;
+    }
+  } @else if $point == iPad {
+    @media screen and (max-width: 767px) and (min-width: 481px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media screen and (min-width: 1025px) {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media screen and (min-width: 1281px) {
+      @content;
+    }
+  }
+}

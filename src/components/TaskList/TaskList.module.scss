@@ -1,7 +1,16 @@
+@import '../../scss/index.module.scss';
+
 .TaskListContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 100px;
+  @include breakpoint(mobile) {
+    margin: 0 20px;
+  }
+  @include breakpoint(iPad) {
+    margin-left: 50px;
+  }
 }
 
 .TaskList {

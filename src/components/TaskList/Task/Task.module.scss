@@ -10,6 +10,8 @@
   justify-content: space-between;
   align-items: center;
   margin: 10px auto;
+  @include breakpoint(mobile) {
+  }
 }
 
 .Task {
@@ -19,6 +21,9 @@
   font-weight: 700;
   padding-left: 10px;
   flex-basis: 58%;
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+  }
 }
 
 .ButtonWrapper {
@@ -38,6 +43,10 @@
   width: 50px;
   outline: none;
   transition: 0.15s ease-in-out;
+  @include breakpoint(mobile) {
+    height: 42px;
+    width: 40px;
+  }
 }
 
 .ButtonRed {

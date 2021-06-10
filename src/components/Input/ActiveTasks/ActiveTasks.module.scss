@@ -4,10 +4,16 @@
   background-color: $lightyellow;
   border-radius: 5px;
   color: $darkblue;
-  margin-left: 50px;
+  margin-right: 50px;
   font-size: 1.4rem;
   font-weight: 700;
   padding: 10px 20px;
+  @include breakpoint(mobile) {
+    display: none;
+  }
+  @include breakpoint(iPad) {
+    display: none;
+  }
 }
 
 .ActiveTasks {

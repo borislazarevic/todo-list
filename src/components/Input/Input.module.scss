@@ -7,6 +7,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include breakpoint(mobile) {
+    flex-wrap: wrap;
+    padding: 10px 0;
+    justify-content: space-evenly;
+  }
+  @include breakpoint(iPad) {
+    padding: 10px 0;
+  }
 }
 
 .Input {
@@ -17,7 +25,13 @@
   font-weight: 700;
   padding: 10px 5px;
   outline: none;
-  width: 40%;
+  min-width: 500px;
+  @include breakpoint(mobile) {
+    min-width: 90%;
+  }
+  @include breakpoint(iPad) {
+    min-width: 70%;
+  }
 }
 
 .ButtonGreen,
@@ -32,6 +46,11 @@
   width: 50px;
   outline: none;
   transition: 0.15s ease-in-out;
+  @include breakpoint(mobile) {
+    margin-top: 10px;
+    height: 62px;
+    width: 30%;
+  }
 }
 
 .ButtonRed {
@@ -44,7 +63,17 @@
 }
 
 .FilterTask {
+  min-width: 500px;
   display: flex;
-  justify-content: space-evenly;
-  margin: 20px 0 40px 0;
+  justify-content: center;
+  margin: 20px 0;
+  @include breakpoint(mobile) {
+    min-width: 300px;
+    display: block;
+    margin: 10px;
+  }
+  @include breakpoint(iPad) {
+    display: block;
+    margin: 10px;
+  }
 }
