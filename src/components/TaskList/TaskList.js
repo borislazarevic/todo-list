@@ -1,7 +1,7 @@
 import React from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
 
-import classes from './TaskList.module.css';
+import classes from './TaskList.module.scss';
 import Task from './Task/Task';
 
 const TaskList = ({

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './Task.module.css';
+import classes from './Task.module.scss';
 
 const Task = ({
   tasks,

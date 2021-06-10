@@ -1,5 +1,7 @@
+@import '../../scss/index.module.scss';
+
 .Form {
-  background-color: var(--lightyellow);
+  background-color: $lightyellow;
   padding: 30px 0;
   text-align: center;
   display: flex;
@@ -8,9 +10,9 @@
 }
 
 .Input {
-  border: 2px solid var(--darkblue);
+  border: 2px solid $darkblue;
   border-radius: 5px;
-  color: var(--darkblue);
+  color: $darkblue;
   font-size: 1.5rem;
   font-weight: 700;
   padding: 10px 5px;
@@ -20,7 +22,7 @@
 
 .ButtonGreen,
 .ButtonRed {
-  background: var(--green);
+  background: $green;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -33,7 +35,7 @@
 }
 
 .ButtonRed {
-  background: var(--red);
+  background: $red;
 }
 
 .ButtonGreen:active,

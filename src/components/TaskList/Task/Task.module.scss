@@ -1,5 +1,7 @@
+@import '../../../scss/index.module.scss';
+
 .TaskContainer {
-  background-color: var(--lightyellow);
+  background-color: $lightyellow;
   border-radius: 5px;
   min-height: 60px;
   min-width: 300px;
@@ -11,7 +13,7 @@
 }
 
 .Task {
-  color: var(--darkblue);
+  color: $darkblue;
   list-style: none;
   font-size: 1.5rem;
   font-weight: 700;
@@ -26,7 +28,7 @@
 
 .ButtonGreen,
 .ButtonRed {
-  background: var(--green);
+  background: $green;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -39,7 +41,7 @@
 }
 
 .ButtonRed {
-  background: var(--red);
+  background: $red;
 }
 
 .ButtonGreen:active,
@@ -51,7 +53,7 @@
   transform: translateX(90px);
   transition: 0.4s ease-in-out;
   text-decoration: line-through;
-  color: var(--darkblue);
+  color: $darkblue;
 }
 
 .InCompleted {

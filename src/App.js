@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import classes from './App.module.css';
+import classes from './App.module.scss';
 import Input from './components/Input/Input';
 import TaskList from './components/TaskList/TaskList';
 

@@ -1,11 +1,13 @@
+@import './scss/index.module.scss';
+
 .App {
-  background-color: var(--yellow);
+  background-color: $yellow;
   text-align: center;
   padding: 10px 0;
 }
 
 .Title {
-  color: var(--darkblue);
+  color: $darkblue;
   letter-spacing: 1.5px;
   font-size: 3rem;
 }

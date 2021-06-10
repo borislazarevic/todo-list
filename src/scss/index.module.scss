@@ -1,0 +1,20 @@
+// Color Variables
+
+$darkblue: rgb(18, 82, 134);
+$lightyellow: rgba(207, 211, 153, 0.13);
+$yellow: rgb(233, 236, 26);
+$red: rgb(212, 42, 42);
+$green: rgb(37, 129, 9);
+$lightgreen: rgb(97, 138, 85);
+$light: rgb(178, 172, 136);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}

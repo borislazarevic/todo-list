@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './CompletedTasks.module.css';
+import classes from './CompletedTasks.module.scss';
 
 const CompletedTasks = ({ active, isCompleted }) => {
   return (

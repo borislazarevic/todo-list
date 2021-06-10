@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { v4 as uuid } from 'uuid';
 
-import classes from './Input.module.css';
+import classes from './Input.module.scss';
 import ActiveTasks from './ActiveTasks/ActiveTasks';
 import CompletedTasks from './CompletedTasks/CompletedTasks';
 

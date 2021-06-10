@@ -1,18 +1,19 @@
-.Active {
-  background-color: var(--lightyellow);
+@import '../../../scss/index.module.scss';
+
+.Complete {
+  background-color: $green;
   border-radius: 5px;
-  color: var(--darkblue);
-  margin-left: 50px;
+  color: white;
+  margin-right: 50px;
   font-size: 1.4rem;
   font-weight: 700;
   padding: 10px 20px;
 }
 
-.ActiveTasks {
+.CompletedTasks {
   background-color: white;
-  border: 2px solid var(--darkblue);
   border-radius: 3px;
-  color: var(--darkblue);
+  color: $green;
   font-size: 1.6rem;
   padding: 5px;
   margin-left: 20px;
