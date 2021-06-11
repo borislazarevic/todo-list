@@ -18,7 +18,7 @@ const Input = ({
 
   useEffect(() => {
     inputFocus.current.focus();
-  });
+  }, [inputText]);
 
   const inputChangeHandler = e => {
     setInputText(e.target.value);
