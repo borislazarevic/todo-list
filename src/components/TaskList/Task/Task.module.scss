@@ -11,6 +11,11 @@
   align-items: center;
   margin: 10px auto;
   @include breakpoint(mobile) {
+    margin: 5px 20px 7px 0;
+  }
+  @include breakpoint(iPad) {
+    margin-left: 10px;
+    margin-right: 30px;
   }
 }
 
@@ -23,6 +28,9 @@
   flex-basis: 58%;
   @include breakpoint(mobile) {
     font-size: 1.2rem;
+  }
+  @include breakpoint(iPad) {
+    font-size: 1.3rem;
   }
 }
 
@@ -44,8 +52,8 @@
   outline: none;
   transition: 0.15s ease-in-out;
   @include breakpoint(mobile) {
-    height: 42px;
-    width: 40px;
+    height: 44px;
+    width: 44px;
   }
 }
 
@@ -59,10 +67,19 @@
 }
 
 .Completed {
-  transform: translateX(90px);
+  transform: translateX(70px);
   transition: 0.4s ease-in-out;
   text-decoration: line-through;
   color: $darkblue;
+  @include breakpoint(mobile) {
+    transform: translateX(12px);
+  }
+  @include breakpoint(iPad) {
+    transform: translateX(20px);
+  }
+  @include breakpoint(tablet) {
+    transform: translateX(40px);
+  }
 }
 
 .InCompleted {

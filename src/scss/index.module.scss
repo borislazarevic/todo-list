@@ -8,6 +8,8 @@ $green: rgb(37, 129, 9);
 $lightgreen: rgb(97, 138, 85);
 $light: rgb(178, 172, 136);
 
+// Global styles
+
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +21,7 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
-// Mixin
+// Breakpoint Mixin
 
 @mixin breakpoint($point) {
   @if $point == mobile {
@@ -31,15 +33,7 @@ body {
       @content;
     }
   } @else if $point == tablet {
-    @media screen and (min-width: 768px) {
-      @content;
-    }
-  } @else if $point == laptop {
-    @media screen and (min-width: 1025px) {
-      @content;
-    }
-  } @else if $point == desktop {
-    @media screen and (min-width: 1281px) {
+    @media screen and (max-width: 1000px) and (min-width: 768px) {
       @content;
     }
   }

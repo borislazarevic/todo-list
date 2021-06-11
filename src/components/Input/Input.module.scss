@@ -28,6 +28,7 @@
   min-width: 500px;
   @include breakpoint(mobile) {
     min-width: 90%;
+    margin: 0 20px;
   }
   @include breakpoint(iPad) {
     min-width: 70%;
@@ -49,7 +50,7 @@
   @include breakpoint(mobile) {
     margin-top: 10px;
     height: 62px;
-    width: 30%;
+    width: 33%;
   }
 }
 
@@ -73,7 +74,6 @@
     margin: 10px;
   }
   @include breakpoint(iPad) {
-    display: block;
-    margin: 10px;
+    margin: 10px 0;
   }
 }
