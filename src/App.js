@@ -40,7 +40,7 @@ function App() {
   return (
     <>
       <div className={classes.App}>
-        <h1 className={classes.Title}>Todo List</h1>
+        <h1 className={classes.Title}>To-Do List</h1>
       </div>
       <Input
         inputText={inputText}
